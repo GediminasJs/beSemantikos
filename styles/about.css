@@ -1,18 +1,38 @@
 * {
     margin: 0 auto;
-    text-align: center;
 }
 @font-face {
     font-family: neueMachina;
     src: url(../fonts/NeueMachina-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: gilroy;
+    src: url(../fonts/Gilroy-Light.ttf);
+    font-weight: 400;
 }
 .background {
     background-image: url(../images/About/backgroundImg.png);
     position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
-    opacity: 10%;
+    z-index: -1;
+    opacity: 5%;
 }
 h2 {
     font-family: neueMachina;
+    font-weight: normal;
+    font-size: 60px;
+}
+p {
+    font-family: gilroy;
+    font-size: 30px;
+}
+.about-container {
+    width: 1620px;
+    margin-top: 150px;
+}
+.about {
+    width: 752px;
 }
