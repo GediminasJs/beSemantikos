@@ -1,0 +1,18 @@
+* {
+    margin: 0 auto;
+    text-align: center;
+}
+@font-face {
+    font-family: neueMachina;
+    src: url(../fonts/NeueMachina-Regular.ttf);
+}
+.background {
+    background-image: url(../images/About/backgroundImg.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 10%;
+}
+h2 {
+    font-family: neueMachina;
+}
