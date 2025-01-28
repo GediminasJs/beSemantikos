@@ -30,9 +30,31 @@ p {
     font-size: 30px;
 }
 .about-container {
+    display: flex;
     width: 1620px;
     margin-top: 150px;
 }
 .about {
     width: 752px;
+}
+.about-aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.about-box {
+    width: 358px;
+    height: 236px;
+    margin: 0;
+    border-radius: 40px;
+    border: 1px solid #909398;
+}
+.about-box div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.about-box div p {
+    font-size: 24px;
+    line-height: 150%;
 }
