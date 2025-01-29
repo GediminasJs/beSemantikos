@@ -1,6 +1,19 @@
+@font-face {
+    font-family: neueMachina;
+    src: url(../fonts/NeueMachina-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: gilroy;
+    src: url(../fonts/Gilroy-Light.ttf);
+    font-weight: 400;
+}
+
 .header {
-    background-image: url(../images/main/photo-1522071820081-009f0129c71c.jpg);
-    height: 1000px;
+    background-image: url(../images/main/vyrukai-dirba.jpg) ;
+    height: 975px;
+   background-size: cover;
+   opacity: 80%;
 }
 .buttons{
     display: flex;
@@ -20,16 +33,31 @@
 .about, .our-services, .job-openings, .logo{
     margin-top: 30px;
     color: white;
-    margin-left: 130px;
+    margin-left: 100px;
     margin-right: 50px;
-    font-size: x-large;
-    
+    font-size: medium;
+    font-family: neueMachina;
+    font-weight: normal;   
+}
+.about {
+    margin-top: 30px;
+    color: white;
+    margin-left: 0px;
+    margin-right: 50px;
+    font-size: medium;
+    font-family: neueMachina;
+    font-weight: normal; 
+
+
+
 }
 .language {
     color: white;
     margin-top: 30px;
-    margin-left: 130px;
-    font-size: x-large;
+    margin-left: 100px;
+    font-size: medium;
+    font-family: neueMachina;
+    font-weight: normal;
 }
 .contact-us{
     margin-top: 15px;
@@ -37,16 +65,73 @@
   justify-content: center;
   align-items: center;
     background-color: blue;
-    margin-left: 250px;
-    margin-right: 20px;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-right: 0px;
     height: 50px;
     width: 200px;
     color: white;
-    text-align: center;
-    font-size: x-large;
+    font-size: medium;
+    font-family: neueMachina;
+    font-weight: normal;
+    
+}
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.buttons1 .logo {
+    margin-left: 0px;
+    margin-right: 330px;
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.buttons1 {
+    border: 0.5px white solid;
+    height: 80px;
+    border-left: 0px;
+    border-top: 0px;
+}
+.buttons2 {
+    border: 0.5px white solid ;
+    
+    height: 80px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 20px;
+}
+.solutions {
+    margin-top: 350px;
+    margin-left: 170px;
+    color: white;
+    font-size: 35px;
+    width: 600px;
+    font-family: neueMachina;
+    font-weight: bolder;
+    background-color: blue;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.goals {
-   
-    height: 1000px;
+.estimate-project {
+width: 250px;
+height: 250px;
+font-size: xx-large;
+color: white;
+font-family: neueMachina;
+font-weight: normal;
+margin-top: 200px;
+margin-left: 150px;
+border: 1px white solid;
+border-radius: 50%;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
