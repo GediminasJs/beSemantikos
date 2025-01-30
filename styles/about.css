@@ -3,16 +3,16 @@
 }
 @font-face {
     font-family: neueMachina;
-    src: url(../fonts/NeueMachina-Regular.ttf);
+    src: url("../fonts/NeueMachina-Regular.ttf");
     font-weight: 400;
 }
 @font-face {
     font-family: gilroy;
-    src: url(../fonts/Gilroy-Light.ttf);
+    src: url("../fonts/Gilroy-Regular.ttf");
     font-weight: 400;
 }
 .background {
-    background-image: url(../images/About/backgroundImg.png);
+    background-image: url("../images/About/backgroundImg.png");
     position: absolute;
     top: 0;
     height: 100%;
@@ -24,10 +24,14 @@ h2 {
     font-family: neueMachina;
     font-weight: normal;
     font-size: 60px;
+    line-height: 57.9px;
+    color: #2f353f
 }
 p {
     font-family: gilroy;
     font-size: 30px;
+    line-height: 45px;
+    color: #2f353fb2;
 }
 .about-container {
     display: flex;
@@ -38,23 +42,43 @@ p {
     width: 752px;
 }
 .about-aside {
+    height: 494px;
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
+    flex: 1;
 }
 .about-box {
+    display: flex;
     width: 358px;
     height: 236px;
     margin: 0;
     border-radius: 40px;
     border: 1px solid #909398;
+    gap: 50px;
+}
+.about-box div p,
+.about-box div h2 {
+    margin: 0
 }
 .about-box div {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin: 50px;
+    width: 100%;
+}
+.about-box div h2 {
+    color: #2e2bd0;
 }
 .about-box div p {
     font-size: 24px;
     line-height: 150%;
+    margin-top: auto;
+}
+.about-box:nth-child(3) {
+    margin: 20px 20px 0 0;
+    background-color: #6563e2;
+}
+.about-box:nth-child(3) * {
+    color: white;
 }
