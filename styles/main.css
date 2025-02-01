@@ -28,8 +28,6 @@
 
 }
 
-
-
 .about, .our-services, .job-openings, .logo{
     margin-top: 30px;
     color: white;
@@ -221,6 +219,50 @@ justify-content: center;
     font-weight: normal;
     font-size: 28px;
 }
+.why-us {
+    height: 919px;
+    margin-top: 1800px;
 
+}
+.why-us-text1{
+    width: 745px;
+    margin-left: 140px;
+}
+.why-us-text1 h1 {
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+.why-us-text1 p {
+   
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgb(103, 103, 103);
+
+}
+.slider {
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 180px;
+    margin-left: 140px;
+
+}
+.slider1 {
+    color: blue;
+}
+.slider1 p {
+    margin-left: 30px;
+}
+.slider2 {
+    color: rgb(159, 159, 159);
+   
+}
+.slider2 p {
+    margin-left: 30px;
+    margin-top: 100px;
+}
 
 
