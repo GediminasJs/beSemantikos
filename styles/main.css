@@ -156,7 +156,7 @@ justify-content: center;
 .goal1, .goal2, .goal3, .goal4, .image-goals1, .image-goals2, .image-goals3 {
     height: 520px;
     width: 520px;
-    border: 1px solid rgb(173, 173, 173);
+    border: 1px solid rgb(159, 159, 159);
     border-radius: 80px;
 }
 .goal1 {
@@ -222,6 +222,7 @@ justify-content: center;
 .why-us {
     height: 919px;
     margin-top: 1800px;
+    margin-bottom: 30px;
 
 }
 .why-us-text1{
@@ -264,5 +265,93 @@ justify-content: center;
     margin-left: 30px;
     margin-top: 100px;
 }
+.why-us-text2 {
+    width: 1100px;
+    border: 1px solid rgb(159, 159, 159);
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 29px;
+    margin-left: 550px;
+    border-radius: 60px;
+    margin-top: -500px;
+    
+}
+.why-us-text2 h1 {
+    color: blue;
+    font-weight: normal;
+}
+.why-us-text2 h1, .why-us-text2 p {
+    margin-left: 40px;
+}
 
+
+.how-we-work {
+    height: 971px;
+    margin-top: 200px;
+}
+.how-we-work h1 {
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-left: 140px;
+}
+.how-we-work-container{
+    display: inline-grid;
+    margin-left: 150px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.work1, .work2, .work3, .work4, .work5, .work6 {
+    width:520px;
+    font-family: neueMachina;
+    font-weight: normal;
+    height: 200px;
+    
+
+}
+.work2, .work3, .work4, .work5 {
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 40px;
+}
+.work1 h3, .work2 h3, .work3 h3, .work4 h3, .work5 h3, .work6 h3 {
+    margin-left: 40px;
+    margin-top: 30px;
+    font-weight: normal;
+    font-size: 25px;
+}
+.work1 p, .work2 p, .work3 p, .work4 p, .work5 p, .work6 p {
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.work1 h3 {
+    width: 400px;
+}
+.work6 {
+    background-color: rgb(101, 101, 255);
+    color: white;
+    border-radius: 40px;
+    height: 350px;
+    grid-row: 2/4;
+    grid-column: 3/4;
+}
+.work-learnmore {
+width: 250px;
+height: 250px;
+font-size: xx-large;
+color: rgb(48, 48, 48);
+font-family: neueMachina;
+font-weight: normal;
+margin-top: -40px;
+margin-left: 150px;
+border: 1px solid rgb(48, 48, 48);
+border-radius: 50%;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
