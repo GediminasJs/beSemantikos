@@ -1,3 +1,6 @@
+:root {
+    --blue: #2e2bd0;
+}
 * {
     margin: 0 auto;
 }
@@ -11,9 +14,13 @@
     src: url("../fonts/Gilroy-Regular.ttf");
     font-weight: 400;
 }
-.background {
-    background-image: url("../images/About/backgroundImg.png");
+body {
+    position: relative;
+}
+body::before {
+    content: "";
     position: absolute;
+    background-image: url("../images/About/backgroundImg.png");
     top: 0;
     height: 100%;
     width: 100%;
@@ -30,11 +37,18 @@ h2 {
 p {
     font-family: gilroy;
     font-size: 30px;
-    line-height: 45px;
+    line-height: 150%;
     color: #2f353fb2;
 }
+.p-small {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+}
+.h2-blue {
+    color: var(--blue);
+}
 .about-container {
-    display: flex;
     width: 1620px;
     margin-top: 150px;
 }
@@ -57,8 +71,7 @@ p {
     border: 1px solid #909398;
     gap: 50px;
 }
-.about-box div p,
-.about-box div h2 {
+.about-box div * {
     margin: 0
 }
 .about-box div {
@@ -68,11 +81,9 @@ p {
     width: 100%;
 }
 .about-box div h2 {
-    color: #2e2bd0;
+    color: var(--blue);
 }
 .about-box div p {
-    font-size: 24px;
-    line-height: 150%;
     margin-top: auto;
 }
 .about-box:nth-child(3) {
@@ -81,4 +92,58 @@ p {
 }
 .about-box:nth-child(3) * {
     color: white;
+}
+.circle {
+    display: inline-block;
+    margin-left: -58px;
+}
+#specialCircle {
+    position: relative;
+}
+#specialCircle img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.ourteam-container {
+    margin-top: 300px;
+}
+.ourteam-container article {
+    width: 1620px;
+}
+.ourteam-container article::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.ourteam-container article p {
+    width: 715px;
+    float: right;
+    margin: 50px 155px 100px 0;
+}
+.ourteam-container img {
+    display: block;
+    object-fit: cover;
+    object-position: 0 -380px;
+    width: 1860px;
+    height: 913px;
+    border-radius: 70px;
+    border: 2px solid var(--blue);
+}
+.values-container {
+    display: flex;
+    width: 1620px;
+    margin: 100px auto 300px auto;
+    align-items: center;
+}
+.values-container div h2:not(.h2-blue) {
+    margin: 100px 0 30px 0;
+    line-height: 90px;
+}
+.line {
+    width: 0px;
+    height: 568px;
+    margin: 0 82px;
+    border-right: 1px solid var(--blue);
 }
