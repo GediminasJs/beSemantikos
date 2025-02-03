@@ -16,6 +16,8 @@
 }
 body {
     position: relative;
+
+    padding-bottom: 700px;
 }
 body::before {
     content: "";
@@ -31,10 +33,16 @@ h2 {
     font-family: neueMachina;
     font-weight: normal;
     font-size: 60px;
-    line-height: 57.9px;
+    line-height: 150%;
     color: #2f353f
 }
-p {
+h3 {
+    font-family: neueMachina;
+    color: white;
+    font-size: 80px;
+    font-weight: 400;
+}
+p, li {
     font-family: gilroy;
     font-size: 30px;
     line-height: 150%;
@@ -109,15 +117,18 @@ p {
 .ourteam-container {
     margin-top: 300px;
 }
-.ourteam-container article {
+.ourteam-container article,
+.timeline-container article {
     width: 1620px;
 }
-.ourteam-container article::after {
+.ourteam-container article::after,
+.timeline-container article::after {
     content: "";
     clear: both;
     display: table;
 }
-.ourteam-container article p {
+.ourteam-container article p,
+.timeline-container article p {
     width: 715px;
     float: right;
     margin: 50px 155px 100px 0;
@@ -141,9 +152,62 @@ p {
     margin: 100px 0 30px 0;
     line-height: 90px;
 }
-.line {
+.values-line {
     width: 0px;
     height: 568px;
     margin: 0 82px;
     border-right: 1px solid var(--blue);
+}
+.timeline-container figure {
+    width: 1860px;
+    padding: 150px 0 100px 0;
+    border-radius: 70px;
+    background: linear-gradient(66deg, var(--blue) -67.89%, #7876F2 125.28%);
+}
+.years * {
+    margin: 0;
+}
+.years {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.years p {
+    font-family: neueMachina;
+    font-size: 60px;
+    color: white;
+    opacity: 50%;
+}
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.timeline div {
+    background-color: white;
+}
+.timeline .short {
+    height: 110px;
+    width: 1px;
+    opacity: 30%;
+}
+.timeline .long {
+    height: 150px;
+    width: 2px;
+    opacity: 50%;
+}
+.timeline .bold {
+    height: 150px;
+    width: 4px;
+    opacity: 100%;
+}
+.timeline-list {
+    width: 650px;
+    margin: 50px 85px 0 0;
+    float: right;
+}
+.timeline-list li {
+    font-size: 24px;
+    color: white;
 }
