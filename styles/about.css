@@ -3,6 +3,7 @@
 }
 * {
     margin: 0 auto;
+    padding: 0;
 }
 @font-face {
     font-family: neueMachina;
@@ -42,6 +43,13 @@ h3 {
     font-size: 80px;
     font-weight: 400;
 }
+h4 {
+    font-family: neueMachina;
+    color: var(--blue);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 150%;
+}
 p, li {
     font-family: gilroy;
     font-size: 30px;
@@ -55,6 +63,10 @@ p, li {
 }
 .h2-blue {
     color: var(--blue);
+}
+button {
+    border: none;
+    background-color: #00000000;
 }
 .about-container {
     width: 1620px;
@@ -122,7 +134,8 @@ p, li {
     width: 1620px;
 }
 .ourteam-container article::after,
-.timeline-container article::after {
+.timeline-container article::after,
+.timeline-container figure::after {
     content: "";
     clear: both;
     display: table;
@@ -204,10 +217,81 @@ p, li {
 }
 .timeline-list {
     width: 650px;
-    margin: 50px 85px 0 0;
+    margin: 50px 300px 0 0;
     float: right;
 }
-.timeline-list li {
+.timeline-list ul li {
     font-size: 24px;
     color: white;
+}
+.clients-container {
+    width: 1620px;
+}
+.clients-container figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.clients {
+    width: 440px;
+    border: 1px solid rgba(128, 128, 128, 0.685);
+    border-radius: 50px;
+    padding: 50px;
+}
+.clients div {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    margin-top: 50px;
+    background: lightgray 0px -1.222px / 100% 150% no-repeat;
+    border-radius: 90px;
+    border: 1.5px solid var(--main-blue, #2E2BD0);
+}
+.clients:nth-child(1) div {
+    background: url(../images/About/Daniel.jpg) lightgray 0px -1.222px / 100% 150% no-repeat;
+}
+.clients:nth-child(2) div {
+    background: url(../images/About/Tom.jpg) lightgray 0px -12.5px / 100% 150% no-repeat;    
+}
+.clients:nth-child(3) div {
+    background: url(../images/About/Ann.jpg) lightgray 50% / cover no-repeat;    
+}
+.clients h4 {
+    margin-top: 15px;
+}
+.clients h4 + p {
+    font-size: 20px;
+}
+.clients p + p {
+    margin: 50px 0 100px 0;
+}
+.clients button {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+}
+.clients button p {
+    font-family: neueMachina;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+.clients button img {
+    margin-left: 20px;
+}
+.clients-container > div * {
+    margin: 0;
+}
+.clients-container > div {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.clients-container > div p {
+    font-family: neueMachina;
+    font-size: 32px;
+    color: #2f353f;
+    margin: 0 50px;
 }
