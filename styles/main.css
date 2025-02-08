@@ -354,4 +354,98 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.technologies {
+    height: 640px;
+    margin-top: 200px;
+}
+.technologies h1 {
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-left: 140px;
+}
+.technologies-text {
+    font-family: neueMachina;
+    font-weight: normal;
+    width: 750px;
+    margin-left: 800px;
+    font-size: 25px;
+    color: rgb(93, 93, 93);
+}
+.technologies-list {
+    display: flex;
+    margin-left: 140px;
+    margin-right: 80px;
+    margin-top: 200px;
+
+}
+.t-list1, .t-list2, .t-list3, .t-list4, .t-list5, .t-list6, .t-list7, .t-list8{
+    font-family: neueMachina;
+    font-weight: normal;
+}
+.t-list1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+.technologies-logo {
+    margin-left: 140px;
+    margin-right: 710px;
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: blue;
+}
+.industries {
+    height: 618px;
+    margin-top: 200px;
+}
+.industries h1 {
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-left: 140px;
+}
+.industries-container {
+    display: flex;
+    margin-left: 90px;
+    margin-right: 70px;
+}
+.industries-log, .industries-e-com, .industries-crm {
+    margin-left: 50px;
+    font-family: neueMachina;
+    font-weight: normal;
+}
+.industries i {
+    font-size: 100px;
+    color: rgb(114, 114, 255);
+}
+.industries-log p, .industries-e-com p, .industries-crm p {
+    font-size: 22px;
+    color: rgb(93, 93, 93);
+}
+.industries-log h2, .industries-e-com h2, .industries-crm h2 {
+    font-weight: normal;
+    font-size: 30px;
+}
+.getintouch {
+    height: 1004px;
+    width: 1860px;
+    margin-left: 10px;
+    margin-top: 200px;
+    background-color: rgb(70, 70, 255);
+    border-radius: 80px;
+    display: flex;
+}
+.getintouch-h1 {
+    color: white;
+    font-family: neueMachina;
+    font-weight: normal;
+    font-size: 100px;
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 150px;
+
+}
 
