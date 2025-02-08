@@ -58,15 +58,37 @@ p, li {
 }
 .p-small {
     font-size: 24px;
-    font-weight: 400;
-    font-style: normal;
 }
 .h2-blue {
     color: var(--blue);
 }
+input {
+    background-color: #00000000;
+    border: none;
+    color: rgba(255, 255, 255, 0.40);
+    font-family: neueMachina;
+    font-size: 32px;
+    line-height: 150%;
+}
+input::placeholder,
+label[for="uploadBtn"] {
+    color: rgba(255, 255, 255, 0.40);
+    font-family: neueMachina;
+    font-size: 32px;
+    line-height: 150%;
+}
+input:focus {
+    outline: none;
+}
 button {
     border: none;
     background-color: #00000000;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
 }
 .about-container {
     width: 1620px;
@@ -264,21 +286,17 @@ button {
 .clients p + p {
     margin: 50px 0 100px 0;
 }
-.clients button {
-    display: flex;
-    margin: 0;
-    align-items: center;
-    padding: 17px 40px;
-    border-radius: 10px;
-    border: 1px solid var(--blue);
-}
-.clients button p {
+.clients button p,
+.contacts-container form button p,
+.contacts-p button p {
     font-family: neueMachina;
     font-size: 20px;
     text-transform: uppercase;
     color: var(--blue);
 }
-.clients button img {
+.clients button img,
+.contacts-container form button img,
+.contacts-p button img {
     margin-left: 20px;
 }
 .clients-container > div * {
@@ -294,4 +312,44 @@ button {
     font-size: 32px;
     color: #2f353f;
     margin: 0 50px;
+}
+.contacts-container * {
+    margin: 0;
+}
+.contacts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1620px;
+    padding: 100px 120px;
+    margin: 300px auto;
+    background: linear-gradient(66deg, var(--blue) -67.89%, #7876F2 125.28%);
+    border-radius: 70px;
+}
+.contacts-container form h3 {
+    font-size: 100px;
+    margin-bottom: 150px;
+}
+.contacts-container form hr {
+    width: 700px;
+    margin: 13.5px 0 50.5px 0;
+}
+.contacts-container form > img {
+    margin: 0 0 -10px 80px;
+}
+.contacts-p {
+    width: 650px;
+    float: right;
+    margin-top: 33px;
+}
+.contacts-p > p {
+    color: white;
+    opacity: 70%;
+}
+.contacts-p p span {
+    font-weight: 600;
+    text-decoration: underline;
+}
+.contacts-p button {
+    margin-top: 50px;
+    border-color: white;
 }

@@ -31,3 +31,62 @@ customElements.define("blue-circle", class extends HTMLElement {
         `
     }
 })
+customElements.define("timeline-lines", class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <div class="timeline">
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="long"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="long"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="bold"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="long"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+                <div class="long"></div>
+                <div class="short"></div>
+                <div class="short"></div>
+            </div>
+        `
+    }
+})
