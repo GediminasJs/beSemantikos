@@ -94,11 +94,13 @@ button {
     padding: 17px 40px;
     border-radius: 10px;
     border: 1px solid var(--blue);
+    font-family: neueMachina;
 }
 .clients button p,
 .contacts-container form button p,
 .contacts-p button p,
-.footer-contacts button p {
+.footer-contacts button p,
+header button:nth-of-type(5)  {
     font-family: neueMachina;
     font-size: 20px;
     text-transform: uppercase;
@@ -107,8 +109,51 @@ button {
 .clients button img,
 .contacts-container form button img,
 .contacts-p button img,
-.footer-contacts button img {
+.footer-contacts button img,
+header button:nth-of-type(5) img {
     margin-left: 20px;
+}
+button:hover {
+    cursor: pointer;
+    outline: 2px solid var(--blue)
+}
+header * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+}
+header {
+    width: 1860px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+header button:nth-of-type(1) {
+    margin-left: auto;
+    padding: 6px 20px;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+header button:nth-of-type(1),
+header button:nth-of-type(2) {
+    margin-right: 120px;
+}
+header > div {
+    align-self: stretch;
+    margin: -30px 80px;
+    width: 1px;
+    background-color: rgba(47, 53, 63, 0.50);
+}
+header button:nth-of-type(4) p {
+    margin-right: 10px;
+    font-family: neueMachina;
+    color: black;
+}
+header button:last-child {
+    background-color: var(--blue);
+    padding: 15px 40px;
+    margin-left: 100px;
 }
 .about-container {
     width: 1620px;
@@ -314,8 +359,9 @@ button {
     justify-content: center;
     margin-top: 100px;
 }
-.clients-container button {
-    border: none
+.clients-container > div button {
+    border: none;
+    padding: 0;
 }
 .clients-container > div p {
     font-family: neueMachina;
@@ -385,7 +431,7 @@ footer > section > div {
     padding: 7.5px;
     margin-right: 10px;
 }
-.footer-contacts button {
+.footer-contacts > button {
     background-color: var(--blue);
     margin-top: 50px;
 }
@@ -403,9 +449,13 @@ footer > section > div {
     margin-top: 30px;
     line-height: normal;
 }
-footer > div {
+footer > button {
     display: flex;
     justify-content: center;
+    padding: 50px 0;
+}
+footer > div {
+    display: flex;
     padding: 50px 0;
 }
 footer > div p {
