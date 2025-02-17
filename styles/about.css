@@ -124,7 +124,7 @@ header * {
     font-size: 20px;
 }
 header {
-    width: 98%;
+    width: 1860px;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -155,18 +155,19 @@ header button:last-child {
     padding: 15px 40px;
     margin-left: 100px;
 }
-.width-1620 {
-    width: 86%;
+.about-container {
+    width: 1620px;
+    margin-top: 150px;
 }
 .about {
-    max-width: 752px;
+    width: 752px;
 }
 .about-aside {
     height: 494px;
-    float: right;
-}
-.about-aside > section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    flex: 1;
 }
 .about-box {
     display: flex;
@@ -175,6 +176,7 @@ header button:last-child {
     margin: 0;
     border-radius: 40px;
     border: 1px solid #909398;
+    gap: 50px;
 }
 .about-box div * {
     margin: 0
@@ -191,11 +193,11 @@ header button:last-child {
 .about-box div p {
     margin-top: auto;
 }
-#specBox {
+.about-box:nth-child(3) {
     margin: 20px 20px 0 0;
     background-color: #6563e2;
 }
-#specBox * {
+.about-box:nth-child(3) * {
     color: white;
 }
 .circle {
@@ -213,6 +215,10 @@ header button:last-child {
 }
 .ourteam-container {
     margin-top: 300px;
+}
+.ourteam-container article,
+.timeline-container article {
+    width: 1620px;
 }
 .ourteam-container article::after,
 .timeline-container article::after,
@@ -238,6 +244,7 @@ header button:last-child {
 }
 .values-container {
     display: flex;
+    width: 1620px;
     margin: 100px auto 300px auto;
     align-items: center;
 }
@@ -304,16 +311,18 @@ header button:last-child {
     font-size: 24px;
     color: white;
 }
+.clients-container {
+    width: 1620px;
+}
 .clients-container figure {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .clients {
     width: 440px;
     border: 1px solid rgba(128, 128, 128, 0.685);
     border-radius: 50px;
     padding: 50px;
-    margin: 0;
 }
 .clients div {
     width: 90px;
@@ -366,6 +375,7 @@ header button:last-child {
 .contacts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 1620px;
     padding: 100px 120px;
     margin: 300px auto;
     background: linear-gradient(66deg, var(--blue) -67.89%, #7876F2 125.28%);
