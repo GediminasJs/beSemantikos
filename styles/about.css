@@ -1,9 +1,13 @@
 :root {
     --blue: #2e2bd0;
 }
+.mobile {
+    display: none;
+}
 * {
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 @font-face {
     font-family: neueMachina;
@@ -28,11 +32,15 @@ body::before {
     z-index: -1;
     opacity: 5%;
 }
+main,
+footer {
+    width: 1860px;
+}
 h2 {
     font-family: neueMachina;
     font-weight: normal;
     font-size: 60px;
-    line-height: 150%;
+    line-height: 100%;
     color: #2f353f;
     font-weight: 400;
 }
@@ -41,6 +49,7 @@ h3 {
     color: white;
     font-size: 80px;
     font-weight: 400;
+    line-height: 100%;
 }
 h4 {
     font-family: neueMachina;
@@ -61,6 +70,9 @@ p, li {
     font-size: 30px;
     line-height: 150%;
     color: #2f353fb2;
+}
+li::marker {
+    font-size: 20px;
 }
 .p-small {
     font-size: 24px;
@@ -96,11 +108,16 @@ button {
     border: 1px solid var(--blue);
     font-family: neueMachina;
 }
+hr {
+    border: none;
+    background-color: rgba(47, 53, 63, 0.5);
+    height: 1px;
+}
 .clients button p,
 .contacts-container form button p,
 .contacts-p button p,
 .footer-contacts button p,
-header button:nth-of-type(5)  {
+header.desktop button:nth-of-type(5)  {
     font-family: neueMachina;
     font-size: 20px;
     text-transform: uppercase;
@@ -110,99 +127,118 @@ header button:nth-of-type(5)  {
 .contacts-container form button img,
 .contacts-p button img,
 .footer-contacts button img,
-header button:nth-of-type(5) img {
+header.desktop button:nth-of-type(5) img {
     margin-left: 20px;
 }
 button:hover {
     cursor: pointer;
     outline: 2px solid var(--blue)
 }
-header * {
+header.desktop * {
     margin: 0;
     padding: 0;
     border: none;
     font-size: 20px;
 }
-header {
+header.desktop {
     width: 1860px;
     padding: 30px 0;
     display: flex;
     align-items: center;
 }
-header button:nth-of-type(1) {
+header.desktop button:nth-of-type(1) {
     margin-left: auto;
     padding: 6px 20px;
     border: 1px solid var(--blue);
     color: var(--blue);
 }
-header button:nth-of-type(1),
-header button:nth-of-type(2) {
+header.desktop button:nth-of-type(1),
+header.desktop button:nth-of-type(2) {
     margin-right: 120px;
 }
-header > div {
+header.desktop > div {
     align-self: stretch;
     margin: -30px 80px;
     width: 1px;
     background-color: rgba(47, 53, 63, 0.50);
 }
-header button:nth-of-type(4) p {
+header.desktop button:nth-of-type(4) p {
     margin-right: 10px;
     font-family: neueMachina;
     color: black;
 }
-header button:last-child {
+header.desktop button:last-child {
     background-color: var(--blue);
     padding: 15px 40px;
     margin-left: 100px;
 }
-.about-container {
+.about-container,
+.ourteam-container article,
+.timeline-container article,
+.values-container,
+.clients-container,
+footer > section {
     width: 1620px;
-    margin-top: 150px;
+}
+.about-container > section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.about-container figure {
+    margin-top: 200px;
 }
 .about {
     width: 752px;
+    margin: 0;
 }
 .about-aside {
-    height: 494px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    flex: 1;
+    margin: 0;
+    justify-self: right;
+}
+.about-aside > section {
+    text-align: right;
+    font-size: 0;
+}
+.about-box * {
+    margin: 0;
 }
 .about-box {
-    display: flex;
+    display: inline-block;
     width: 358px;
     height: 236px;
-    margin: 0;
     border-radius: 40px;
     border: 1px solid #909398;
-    gap: 50px;
+    padding: 50px;
+    text-align: left;
+    vertical-align: top;
 }
-.about-box div * {
-    margin: 0
-}
-.about-box div {
+.about-box > div {
     display: flex;
     flex-direction: column;
-    margin: 50px;
-    width: 100%;
+    height: 100%;
 }
-.about-box div h2 {
+.about-box h2 {
     color: var(--blue);
 }
-.about-box div p {
+.about-box p {
     margin-top: auto;
 }
-.about-box:nth-child(3) {
+#blueBox {
     margin: 20px 20px 0 0;
     background-color: #6563e2;
 }
-.about-box:nth-child(3) * {
+#blueBox * {
     color: white;
+}
+#blueBox p {
+    opacity: 70%;
 }
 .circle {
     display: inline-block;
     margin-left: -58px;
+}
+.about-container > figure gray-circle:first-child {
+    margin-left: 58px;
 }
 #specialCircle {
     position: relative;
@@ -215,10 +251,6 @@ header button:last-child {
 }
 .ourteam-container {
     margin-top: 300px;
-}
-.ourteam-container article,
-.timeline-container article {
-    width: 1620px;
 }
 .ourteam-container article::after,
 .timeline-container article::after,
@@ -233,36 +265,37 @@ header button:last-child {
     float: right;
     margin: 50px 155px 100px 0;
 }
-.ourteam-container img {
+.ourteam-container > div {
     display: block;
-    object-fit: cover;
-    object-position: 0 -380px;
-    width: 1860px;
+    background-image: url("../images/About/ourTeam.jpg");
+    background-size: cover;
+    background-position-y: -400px;
     height: 913px;
-    border-radius: 70px;
+    border-radius: 6.48vw;
     border: 2px solid var(--blue);
 }
 .values-container {
     display: flex;
-    width: 1620px;
     margin: 100px auto 300px auto;
     align-items: center;
 }
-.values-container div h2:not(.h2-blue) {
+.values-container h2:not(.h2-blue) {
     margin: 100px 0 30px 0;
     line-height: 90px;
 }
 .values-line {
-    width: 0px;
+    width: 1px;
     height: 568px;
     margin: 0 82px;
-    border-right: 1px solid var(--blue);
+    background-color: var(--blue);
 }
-.timeline-container figure {
-    width: 1860px;
+.timeline-container > figure {
     padding: 150px 0 100px 0;
     border-radius: 70px;
     background: linear-gradient(66deg, var(--blue) -67.89%, #7876F2 125.28%);
+}
+.timeline-container > figure > div {
+    width: 1560px;
 }
 .years * {
     margin: 0;
@@ -278,6 +311,10 @@ header button:last-child {
     font-size: 60px;
     color: white;
     opacity: 50%;
+    line-height: 100%;
+}
+.years h3 {
+    font-size: 80px;
 }
 .timeline {
     display: flex;
@@ -286,6 +323,7 @@ header button:last-child {
 }
 .timeline div {
     background-color: white;
+    border-radius: 2px;
 }
 .timeline .short {
     height: 110px;
@@ -307,24 +345,23 @@ header button:last-child {
     margin: 50px 300px 0 0;
     float: right;
 }
-.timeline-list ul li {
+.timeline-list > ul > li {
     font-size: 24px;
     color: white;
 }
-.clients-container {
-    width: 1620px;
+.clients-container > h2 {
+    margin: 300px 0 100px 0;
 }
 .clients-container figure {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .clients {
-    width: 440px;
     border: 1px solid rgba(128, 128, 128, 0.685);
     border-radius: 50px;
     padding: 50px;
 }
-.clients div {
+.profileContainer > .img {
     width: 90px;
     height: 90px;
     margin: 0;
@@ -333,13 +370,13 @@ header button:last-child {
     border-radius: 90px;
     border: 1.5px solid var(--blue);
 }
-.clients:nth-child(1) div {
+.clients:nth-child(1) .img {
     background: url(../images/About/Daniel.jpg) lightgray 0px -1.222px / 100% 150% no-repeat;
 }
-.clients:nth-child(2) div {
+.clients:nth-child(2) .img {
     background: url(../images/About/Tom.jpg) lightgray 0px -12.5px / 100% 150% no-repeat;    
 }
-.clients:nth-child(3) div {
+.clients:nth-child(3) .img {
     background: url(../images/About/Ann.jpg) lightgray 50% / cover no-repeat;    
 }
 .clients h4 {
@@ -348,7 +385,7 @@ header button:last-child {
 .clients h4 + p {
     font-size: 20px;
 }
-.clients p + p {
+.clients > p {
     margin: 50px 0 100px 0;
 }
 .clients-container > div * {
@@ -375,7 +412,6 @@ header button:last-child {
 .contacts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 1620px;
     padding: 100px 120px;
     margin: 300px auto;
     background: linear-gradient(66deg, var(--blue) -67.89%, #7876F2 125.28%);
@@ -388,8 +424,10 @@ header button:last-child {
 .contacts-container form hr {
     width: 700px;
     margin: 13.5px 0 50.5px 0;
+    background-color: white;
+    border: none;
 }
-.contacts-container form > img {
+.contacts-container form > section > img {
     margin: 0 0 -10px 80px;
 }
 .contacts-p {
@@ -398,16 +436,22 @@ header button:last-child {
     margin-top: 33px;
 }
 .contacts-p > p {
-    color: white;
-    opacity: 70%;
+    color: rgba(255, 255, 255, 0.70);
 }
-.contacts-p p span {
+.contacts-p span {
+    color: rgba(255, 255, 255);
     font-weight: 600;
     text-decoration: underline;
 }
 .contacts-p button {
     margin-top: 50px;
     border-color: white;
+}
+footer > hr:first-child {
+    margin-bottom: 50px;
+}
+footer > hr:last-of-type {
+    margin-top: 50px;
 }
 footer > section {
     display: flex;
@@ -418,7 +462,7 @@ footer > section * {
 footer > section > div {
     display: inline-block;
 }
-.footer-contacts > p {
+.footer-contacts > div > p {
     color: var(--blue);
     font-weight: 500;
     text-decoration: underline;
@@ -435,9 +479,18 @@ footer > section > div {
     background-color: var(--blue);
     margin-top: 50px;
 }
+.footer-offices {
+    margin-left: 500px;
+}
 .footer-offices p {
     font-size: 20px;
     color: rgba(47, 53, 63, 0.5);
+}
+.footer-offices div:first-child > p:first-child {
+    margin-top: 50px;
+}
+.footer-offices div:nth-child(2) > p:first-child {
+    margin-top: 30px;
 }
 .footer-offices p:nth-child(2),
 .footer-offices p:nth-child(5) {
@@ -448,6 +501,9 @@ footer > section > div {
     font-size: 20px;
     margin-top: 30px;
     line-height: normal;
+}
+.footer-services div:first-child p:first-of-type {
+    margin-top: 50px;
 }
 footer > button {
     display: flex;
@@ -462,4 +518,403 @@ footer > div p {
     margin: 0;
     font-size: 16px;
     color: rgba(47, 53, 63, 0.50);
+}
+@media (max-width: 1080px) {
+    .desktop {
+        display: none !important;
+    }
+    .mobile {
+        display: block;
+    }
+    header,
+    main,
+    footer {
+        width: 92.6vw;
+    }
+    h2 {
+        font-size: 7.4vw;
+    }
+    h3 {
+        font-size: 9.26vw;
+    }
+    p,
+    .p-small {
+        font-size: 40px;
+    }
+    input,
+    input::placeholder,
+    label[for="uploadBtn"] {
+        font-size: 3.89vw;
+    }
+    button {
+        padding: 0;
+        border-width: 2px;
+    }
+    hr {
+        height: 2px;
+        border-radius: 2px;
+    }
+    li::marker {
+        font-size: 3vw;
+    }
+    .about-container,
+    .ourteam-container article,
+    .timeline-container article,
+    .values-container,
+    .clients-container,
+    .contacts-container,
+    .timeline-container > figure > div,
+    footer > section,
+    .about,
+    .ourteam-container article p,
+    .timeline-container article p,
+    .timeline-list,
+    .contacts-container form hr,
+    .contacts-p,
+    .about-aside {
+        width: 100%;
+    }
+    header {
+        display: flex !important;
+        padding-top: 9.26vw;
+    }
+    header button {
+        box-sizing: border-box !important;
+        background-color: var(--blue);
+        width: 116px;
+        background-size: 60px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 20px;
+    }
+    header img {
+        display: block;
+    }
+    .about-container > section {
+        display: block;
+    }
+    .about-aside {
+        margin: 9.26vw 0 9.26vw 0;
+    }
+    .about-box {
+        display: block;
+        width: 100%;
+        height: 57.87vw;
+        padding: 9.26vw;
+        border-radius: 8.33vw;
+    }
+    .about-box h2 {
+        font-size: 16.30vw;
+    }
+    .about-box p {
+        font-size: 4.63vw;
+    }
+    #blueBox {
+        background-color: #00000000;
+        margin: 0;
+    }
+    #blueBox h2 {
+        color: var(--blue)
+    }
+    #blueBox p {
+        color: #2f353fb2;
+        opacity: 100%;
+    }
+    .about-container figure {
+        margin: 0;
+    }
+    .about-container > figure gray-circle:first-child {
+        margin-left: 8.33vw;
+    }
+    .circle {
+        margin-left: -8.33vw;
+    }
+    .circle svg {
+        width: 24.63vw;
+    }
+    .circle circle {
+        stroke-width: 3;
+    }
+    #specialCircle img {
+        width: 14.81vw;
+    }
+    .ourteam-container {
+        margin: 0;
+    }
+    .ourteam-container > article > h2 {
+        margin: 23.15vw 0 9.26vw 0;
+    }
+    .ourteam-container > div {
+        height: 715px;
+        background-position: center;
+        margin: 9.26vw 0 13.89vw 0;
+    }
+    .ourteam-container article p,
+    .timeline-container article p,
+    .timeline-list {
+        float: none;
+        margin: 0;
+    }
+    .values-container {
+        display: block;
+        margin: 0;
+    }
+    .values-container h2:not(.h2-blue) {
+        font-size: 5.56vw;
+        margin: 9.5vw 0 2vw 0;
+    }
+    .values-container p {
+        font-size: 4.63vw;
+    }
+    .values-line {
+        height: 2.5px;
+        width: 100%;
+        margin: 11.11vw 0;
+    }
+    .timeline-container > article > h2 {
+        margin: 23.15vw 0 9.26vw 0;
+    }
+    .timeline-container > figure {
+        margin: 9.26vw 0 23.15vw 0;
+        padding: 7.41vw 1.85vw;
+    }
+    .timeline div:nth-last-child(-n+9),
+    .timeline div:nth-child(-n+9) {
+        display: none;
+    }
+    .years {
+        margin: 0 2.78vw;
+    }
+    .years h3 {
+        font-size: 9.26vw;
+    }
+    .years p {
+        font-size: 7.4vw;
+    }
+    .timeline {
+        margin: 4.63vw 0 9.26vw 0;
+    }
+    .timeline .short {
+        height: 34.81vw;
+    }
+    .timeline .long,
+    .timeline .bold {
+        height: 47.50vw;
+    }
+    .timeline-list > ul > li {
+        font-size: 40px;
+        margin-left: 6vw;
+    }
+    .clients-container > h2 {
+        margin: 0;
+    }
+    .clients-container > figure {
+        overflow: scroll;
+        margin: 9.26vw -3.7vw 23.15vw -3.7vw;
+    }
+    .clients {
+        display: flex;
+        flex-wrap: wrap;
+        width: 81.48vw;
+        padding: 4.63vw;
+        margin-right: 1.85vw;
+        border-width: 2px;
+    }
+    .profileContainer {
+        margin: 0;
+    }
+    .profileContainer > .img {
+        width: 14.81vw;
+        height: 14.81vw;
+        display: inline-block;
+        margin: 0;
+    }
+    .profileContainer > .container {
+        display: inline-block;
+        margin-left: 4.63vw;        
+    }
+    .clients h4 {
+        font-size: 3.70vw;
+        margin: 0;
+    }
+    .clients h4 + p {
+        font-size: 2.78vw;
+    }
+    .clients > button,
+    .contacts-p > button,
+    .contacts-container > form > button,
+    .footer-contacts > button {
+        padding: 1.90vw 3.70vw;
+        align-self: flex-end;
+    }
+    .clients > button > p,
+    .contacts-p > button > p,
+    .contacts-container > form > button > p,
+    .footer-contacts > button > p {
+        font-size: 30px;
+        line-height: 100%;
+    }
+    .clients > button > img,
+    .contacts-p > button > img,
+    .contacts-container > form > button > img,
+    .footer-contacts > button > img {
+        width: 34px;
+    }
+    .clients > button {
+        border-radius: 20px;
+    }
+    .contacts-container {
+        display: block;
+        margin: 0;
+        padding: 5.6vw;
+    }
+    .contacts-container > h3 {
+        line-height: 130%;
+    }
+    .contacts-p {
+        margin: 0;
+        float: none;
+    }
+    .contacts-p > .p-small {
+        font-size: 34px;
+        margin: 7vw 0 4.63vw 0;
+    }
+    .contacts-p > button {
+        margin: 0;
+    }
+    .contacts-container > form > section {
+        margin: 9.26vw 0;
+    }
+    .contacts-container form > section > img {
+        width: 4.63vw;
+        margin: 0.93vw 0 0 0;
+        float: right;
+    }
+    footer > hr:first-child {
+        margin: 23.15vw 0 9.26vw 0;
+    }
+    footer > section {
+        display: block;
+    }
+    footer > section > div {
+        display: block;
+    }
+    .footer-contacts > div:first-of-type {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    .footer-contacts > div > p {
+        margin: 0;
+        font-size: 3.15vw;
+        font-weight: 600;
+    }
+    .footer-contacts > div:nth-of-type(2) {
+        margin: 9.26vw 0 4.63vw 0;
+    }
+    .footer-contacts > div > div {
+        padding: 1.3vw;
+        border-radius: 2.6vw;
+        border-width: 2px;
+    }
+    .footer-contacts > div > div > img {
+        width: 8.7vw;
+    }
+    .footer-contacts > button {
+        margin: 0;
+        border-radius: 20px;
+    }
+    .footer-offices {
+        margin-left: 0;
+    }
+    .footer-offices {
+        margin: 0;
+    }
+    .footer-offices > div,
+    .footer-services > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7vw;
+    }
+    .footer-offices h5 {
+        font-size: 4.26vw;
+        margin: 13.89vw 0 9.26vw 0;
+    }
+    .footer-offices p {
+        font-size: 3.70vw;
+    }
+    .footer-offices p:first-child {
+        font-size: 4.26vw;
+        color: var(--blue);
+        margin: 0 !important;
+    }
+    .footer-offices p:nth-child(2) {
+        color: rgba(47, 53, 63, 0.5);
+        margin: 4.63vw 0 2.50vw 0;
+    }
+    .footer-services h5 {
+        font-size: 4.26vw;
+        margin-top: 13.89vw;
+    }
+    .footer-services p {
+        font-size: 3.70vw;
+        margin-top: 4.17vw;
+    }
+    footer > hr:last-of-type {
+        margin: 9.72vw 0 4.63vw 0;
+    }
+    footer > div {
+        display: block;
+        padding: 0 0 9.26vw 0;
+    }
+    footer > div > p {
+        font-size: 3.70vw;
+        display: inline-block;
+    }
+    footer > div > p:nth-child(2) {
+        float: right;
+    }
+    footer > div > p:last-child {
+        margin-top: 4.63vw;
+    }
+}
+@media (max-width: 740px) {
+    h2 {
+        font-size: 10vw
+    }
+    p,
+    .p-small {
+        font-size: 5vw;
+    }
+    li::marker {
+        font-size: 5vw;
+    }
+    header {
+        align-items: flex-end;
+    }
+    header button {
+        width: 12vw;
+        height: 12vw;
+        background-size: 7vw;
+        border-radius: 3vw;
+    }
+    header img {
+        width: 40vw;
+    }
+    .about-box p {
+        font-size: 6vw;
+    }
+    .ourteam-container > div {
+        height: 90vw;
+        background-size: 180%;
+    }
+    .values-container h2 {
+        font-size: 13vw;
+    }
+    .values-container h2:not(.h2-blue) {
+        font-size: 9vw;
+    }
+    .timeline-list > ul > li {
+        font-size: 5vw;
+    }
 }

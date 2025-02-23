@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="background"></div>
-    <header>
+    <header class="desktop">
         <a href="../index.html"><img src="../images/logo.svg" alt=""></a>
         <button>about</button>
         <button>our services</button>
@@ -22,11 +22,17 @@
             <img src="../images/About/openWhite.svg" alt="">
         </button>
     </header>
-    <hr style="width: 1860px;">
+    <header class="mobile">
+        <button style="background-image: url('../images/About/mobile/menu.svg');"></button>
+        <img src="../images/mobileLogo.svg" alt="">
+        <button style="background-image: url('../images/About/openWhite.svg');"></button>
+    </header>
+    <hr class="desktop" style="width: 1860px;">
     <main>
         <section class="about-container">
-            <h2 style="margin-bottom: 50px;">Who we are?</h2>
-            <section style="display: flex;">
+            <h2 class="desktop" style="margin: 150px 0 50px 0;">Who we are?</h2>
+            <h2 class="mobile" style="margin: 18.52vw 0 9.26vw 0;">What are our goals?</h2>
+            <section style="margin: 0;">
                 <article class="about">
                     <p>
                         IT Support Group has worked with more than 200 businesses (and counting) in the past 10 years and we offer our experience with the best expert talent pool in the industry to fulfil all your application development needs.<br><br>
@@ -34,46 +40,53 @@
                     </p>
                 </article>
                 <aside class="about-aside">
-                    <div class="about-box">
-                        <div>
-                            <h2>10</h2>
-                            <p class="p-small">years in industry</p>
+                    <section>
+                        <div class="about-box">
+                            <div>
+                                <h2>10</h2>
+                                <p class="desktop p-small">years in industry</p>
+                                <p class="mobile p-small">Years in this industries</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="about-box">
-                        <div>
-                            <h2>200</h2>
-                            <p class="p-small">clients worldwide</p>
+                        <div class="about-box">
+                            <div>
+                                <h2>200</h2>
+                                <p class="p-small">clients worldwide</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="about-box">
-                        <div>
-                            <h2>10+</h2>
-                            <p class="p-small" style="opacity: 70%;">strong developers</p>
+                    </section>
+                    <section>
+                        <div class="about-box" id="blueBox">
+                            <div>
+                                <h2>10+</h2>
+                                <p class="p-small">strong developers</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="about-box">
-                        <div>
-                            <h2>8-10</h2>
-                            <p class="p-small">weeks project take with development</p>
+                        <div class="about-box">
+                            <div>
+                                <h2>8-10</h2>
+                                <p class="p-small">weeks project take with development</p>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </aside>
             </section>
-            <figure style="margin-top: 200px; text-align: center;">
-                <gray-circle style="margin-left: 58px;"></gray-circle>
-                <light-gray-circle></light-gray-circle>
-                <blue-circle></blue-circle>
+            <figure style="text-align: center;">
                 <gray-circle></gray-circle>
                 <light-gray-circle></light-gray-circle>
                 <blue-circle></blue-circle>
                 <gray-circle></gray-circle>
-                <light-gray-circle></light-gray-circle>
-                <blue-circle></blue-circle>
-                <gray-circle></gray-circle>
-                <light-gray-circle></light-gray-circle>
+                <div class="desktop" style="display: inline-block;">
+                    <light-gray-circle></light-gray-circle>
+                    <blue-circle></blue-circle>
+                    <gray-circle></gray-circle>
+                    <light-gray-circle></light-gray-circle>
+                    <blue-circle></blue-circle>
+                    <gray-circle></gray-circle>
+                    <light-gray-circle></light-gray-circle>
+                </div>
                 <div class="circle" id="specialCircle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 184 184" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="184" viewBox="0 0 184 184" fill="none">
                         <circle cx="92" cy="92" r="91" fill="#9695E7" stroke="white" stroke-width="2"/>
                     </svg>
                     <img src="../images/About/add.svg" alt="">
@@ -87,7 +100,7 @@
                     We started our way with the idea of creating innovative products, and we have been following this trend since 2013 and continue to build technological solutions for our customers.
                 </p>
             </article>
-            <img src="../images/About/ourTeam.jpg" alt="">
+            <div></div>
             <section class="values-container">
                 <div>
                     <h2 class="h2-blue">[ 01 ]</h2>
@@ -96,13 +109,13 @@
                 </div>
                 <div class="values-line"></div>
                 <div>
-                    <h2 class="h2-blue" style="width: 408px;">[ 02 ]</h2>
+                    <h2 class="h2-blue">[ 02 ]</h2>
                     <h2>Punctuality</h2>
                     <p>We keep our agreements and do exactly what we agreed.</p>
                 </div>
                 <div class="values-line"></div>
                 <div>
-                    <h2 class="h2-blue" style="width: 468px;">[ 03 ]</h2>
+                    <h2 class="h2-blue">[ 03 ]</h2>
                     <h2>Precision</h2>
                     <p>We are careful so that what we do doesn't have be dug up again.</p>
                 </div>
@@ -116,13 +129,13 @@
                 </p>
             </article>
             <figure>
-                <div style="width: 1560px;">
+                <div>
                     <div class="years">
-                        <p>2013</p>
+                        <p class="desktop">2013</p>
                         <p>2015</p>
                         <h3>2018</h3>
                         <p>2020</p>
-                        <p>2022</p>
+                        <p class="desktop">2022</p>
                     </div>
                     <timeline-lines></timeline-lines>
                 </div>
@@ -137,12 +150,16 @@
             </figure>
         </section>
         <section class="clients-container">
-            <h2 style="margin: 300px 0 100px 0;">What our clients say about us</h2>
+            <h2>What our clients say about us</h2>
             <figure>
                 <div class="clients">
-                    <div></div>
-                    <h4>Daniel Smith</h4>
-                    <p>Position & Company Title</p>
+                    <div class="profileContainer">
+                        <div class="img"></div>
+                        <div class="container">
+                            <h4>Daniel Smith</h4>
+                            <p>Position & Company Title</p>
+                        </div>
+                    </div>
                     <p>"They are very professional and are always interested in understanding the problem that we are solving."</p>
                     <button>
                         <p>View the project</p>
@@ -150,9 +167,13 @@
                     </button>
                 </div>
                 <div class="clients">
-                    <div></div>
-                    <h4>Tom Peters</h4>
-                    <p>Position & Company Title</p>
+                    <div class="profileContainer">
+                        <div class="img"></div>
+                        <div class="container">
+                            <h4>Tom Peters</h4>
+                            <p>Position & Company Title</p>
+                        </div>
+                    </div>
                     <p>"Through our case engagement, LLI has demonstrated professionalism and initiative in interactions. I ..."</p>
                     <button>
                         <p>View the project</p>
@@ -160,9 +181,13 @@
                     </button>
                 </div>
                 <div class="clients">
-                    <div></div>
-                    <h4>Ann Hidlton</h4>
-                    <p>Position & Company Title</p>
+                    <div class="profileContainer">
+                        <div class="img"></div>
+                        <div class="container">
+                            <h4>Ann Hidlton</h4>
+                            <p>Position & Company Title</p>
+                        </div>
+                    </div>
                     <p>"After several years, they've proven that they deliver quality work in the context that we use."</p>
                     <button>
                         <p>View the project</p>
@@ -170,7 +195,7 @@
                     </button>
                 </div>
             </figure>
-            <div>
+            <div class="desktop">
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                         <path d="M18.7494 45.8337H31.2494C41.666 45.8337 45.8327 41.667 45.8327 31.2503V18.7503C45.8327 8.33366 41.666 4.16699 31.2494 4.16699H18.7494C8.33268 4.16699 4.16602 8.33366 4.16602 18.7503V31.2503C4.16602 41.667 8.33268 45.8337 18.7494 45.8337Z" stroke="#9695E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -187,26 +212,39 @@
             </div>
         </section>
         <section class="contacts-container">
+            <h3 class="mobile">Get in touch <br> with us</h3>
+            <div class="mobile contacts-p">
+                <p class="p-small">
+                    Simply fill in your Email in our contact form or get in touch with us by our  email - <span>itsupportgroup@gmail.com</span> - , and one of our experts will contact you shortly. <br> This could be the beginning of a wonderful collaboration and the easiest way to acquire a highly-experienced team.
+                </p>
+                <button>
+                    <p style="color: white;">Download the brief</p>
+                    <img src="../images/About/downloadBrief.svg" alt="">
+                </button>
+            </div>
             <form>
-                <h3>Get in touch <br> with us</h3>
-                <input type="text" placeholder="Enter your Full Name">
-                <hr>
-                <input type="email" placeholder="Enter your Email">
-                <hr>
-                <input type="tel" placeholder="Enter your Phone Number">
-                <hr>
-                <input type="text" placeholder="Describe your project">
-                <hr>
-                <input type="file" id="uploadBtn" style="display: none;">
-                <label for="uploadBtn">Upload file (max file size is 30 MB)</label>
-                <img src="../images/About/uploadBtn.svg" alt="">
-                <hr>
+                <section>
+                    <h3 class="desktop">Get in touch <br> with us</h3>
+                    <input type="text" placeholder="Enter your Full Name">
+                    <hr>
+                    <input type="email" placeholder="Enter your Email">
+                    <hr>
+                    <input type="tel" placeholder="Enter your Phone Number">
+                    <hr>
+                    <input type="text" placeholder="Describe your project">
+                    <hr>
+                    <input type="file" id="uploadBtn" style="display: none;">
+                    <label for="uploadBtn">Upload file (max file size is 30 MB)</label>
+                    <img src="../images/About/uploadBtn.svg" alt="" style="cursor: pointer;">
+                    <hr>
+                </section>
                 <button style="background-color: white;">
-                    <p>Submit</p>
+                    <p class="desktop">Submit</p>
+                    <p class="mobile">View the project</p>
                     <img src="../images/About/open.svg" alt="">
                 </button>
             </form>
-            <aside>
+            <aside class="desktop">
                 <div class="contacts-p">
                     <p class="p-small">
                         Simply fill in your Email in our contact form or get in touch with us by our  email - <span>itsupportgroup@gmail.com</span> - , and one of our experts will contact you shortly. <br> This could be the beginning of a wonderful collaboration and the easiest way to acquire a highly-experienced team.
@@ -219,12 +257,15 @@
             </aside>
         </section>
     </main>
-    <footer style="width: 1860px;">
-        <hr style="margin-bottom: 50px;">
-        <section style="width: 1620px;">
+    <footer>
+        <hr>
+        <section>
             <div class="footer-contacts">
-                <img src="../images/logo.svg" alt="">
-                <p class="p-small">itsupportgroup@gmail.com</p>
+                <img class="desktop" src="../images/logo.svg" alt="">
+                <div>
+                    <img class="mobile" src="../images/mobileLogo.svg" alt="">
+                    <p class="p-small">itsupportgroup@gmail.com</p>
+                </div>
                 <div>
                     <div><img src="../images/About/insta-ico.svg" alt=""></div>
                     <div><img src="../images/About/wapp-ico.svg" alt=""></div>
@@ -236,30 +277,43 @@
                     <img src="../images/About/openWhite.svg" alt="">
                 </button>
             </div>
-            <div class="footer-offices" style="margin-left: 500px;">
+            <div class="footer-offices">
                 <h5>Our offices</h5>
-                <p style="margin-top: 50px;">In Kyiv</p>
-                <p>+ 375 (29) 675-12-22</p>
-                <p>44 Karl Liebknecht Street, floor 5, office 522</p>
-                <p style="margin-top: 30px;">In Vilnius</p>
-                <p>+370 (52) 654-280-28</p>
-                <p>44 Karl Liebknecht Street, floor 5, office 522</p>
+                <div>
+                    <div>
+                        <p>In Kyiv</p>
+                        <p>+ 375 (29) 675-12-22</p>
+                        <p>44 Karl Liebknecht Street, floor 5, office 522</p>
+                    </div>
+                    <div>
+                        <p>In Vilnius</p>
+                        <p>+370 (52) 654-280-28</p>
+                        <p>44 Karl Liebknecht Street, floor 5, office 522</p>
+                    </div>
+                </div>
             </div>
             <div class="footer-services" style="margin-left: auto;">
                 <h5>Services</h5>
-                <p style="margin-top: 50px;">Technical Support</p>
-                <p>Frontend Development</p>
-                <p>Backend Development</p>
-                <p>Mobile app development</p>
-                <p>UI/UX Design</p>
-                <p>Software Development</p>
+                <div>
+                    <div>
+                        <p>Technical Support</p>
+                        <p>Frontend Development</p>
+                        <p>Backend Development</p>
+                    </div>
+                    <div>
+                        <p>Mobile app development</p>
+                        <p>UI/UX Design</p>
+                        <p>Software Development</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <hr style="margin-top: 50px;">
+        <hr>
         <div>
             <p style="margin-right: auto;">Development by IT Support Group.</p>
             <p>Data Privacy.</p>
-            <p style="margin-left: auto;">© 2023 pwrteams. All rights reserved.</p>
+            <p class="desktop" style="margin-left: auto;">© 2023 pwrteams. All rights reserved.</p>
+            <p class="mobile" style="margin-left: auto;">© 2023 IT Support Group</p>
         </div>
     </footer>
 <script src="../js/about.js"></script>
